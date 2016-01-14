@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale= 1, maximum-scale=1" />
+	<!-- <meta http-equiv="refresh" content="7"> -->
+	<meta charset="UTF-8">
+	<title>Sfotipy-jianfe66</title>
+	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	<div id="contenedor">
+		<header>
+			<div id="cabeceraEscritorio" class=" oculto">
+				<figure class="logo">
+					<img src="img/logo.png" height="38" width="122" alt="Logo Sfotipy">
+				</figure>
+				<div class="usuarioA">
+					<figure class="usuario">
+						<img src="img/avatarPerfil.jpg" height="50" width="50" alt="Imagen usuario">
+					</figure>
+					<span class="nameUsuario">
+						Masterofdisaster
+					</span>
+				</div>
+				<form action="">
+					<span class="icon-search" onclick="verSearch()"></span>
+					<input type="text" class="search" placeholder="ejemplo">
+					<span class="icono-limpiar">x</span>
+				</form>
+			</div>
+			<nav id="menu" class="menu oculto">
+				<ul>
+					<li class="item" onclick="verTopHits()">Top hits</li>
+					<li class="item" onclick="verPerfil()">Profile</li>
+					<li class="item">Settings</li>
+					<li class="item" onclick="verPlaylist()">Playlist</li>
+				</ul>
+			</nav>
+			<div id="cabeceraMovil" class="">
+				<span class="icono_1 icon-atras" onclick="verSearch()"></span>
+				<input type="text" class="search">
+				<span class="icono_1 icon-menu"></span>
+				<span class="icono_1 icon-desplegable"></span>
+			</div>
+		</header>
+		<section id="paginaInicio" class="">
+			<div id="social">
+				<figure>
+					<img id="logoSpotify" src="img/logoSpotify.png" alt="Logo de Sfotipy">
+				</figure>
+				<p class="parr-social">Toda la música que te gusta, en todas partes</p>
+				<a href="#" class="facebook botonSocial" onclick="verTopHits()">
+					<span class="icon-facebook icono_1"></span>
+					<p class="parr-conecta">Conéctate con Facebook</p>
+				</a>
+				<a href="#" class="twitter botonSocial" onclick="verTopHits()">
+					<span class="icon-twitter icono_1"></span>
+					<p class="parr-conecta">Conéctate con Twitter</p>
+				</a>
+				<a href="#" class="enlace01" onclick="verLogin()">log in</a>
+				<a class="enlace02" href="#" onclick="verCrearCuenta()">or<span> Create account</span></a>
+			</div>
+			<div id="registrar">
+				<a href="#" onclick="verLogin()">log in</a>
+				<a href="#" onclick="verCrearCuenta()">Create account</a>
+			</div>
+			<section  id="crearCuenta" class="oculto">
+				<h3>Crea una cuenta</h3>
+				<form>
+					<!-- <span class="icon-user"></span> -->
+					<input class="username" type="text" placeholder="Username">	
+					<!-- <span class="icon-mail"></span> -->
+					<input class="email" type="text" placeholder="Email">	
+					<!-- <span class="icon-lock"></span> -->
+					<input class="elegirClave" type="text" placeholder="Elige una contraseña">	
+					<!-- <span class="icon-lock"></span> -->
+					<input class="confirmarClave" type="text" placeholder="Confirma la contraseña">	
+					<input class="boton" type="button" value="Regístrate" onclick="verLogin()">
+				</form>
+			</section>		
+			<section id="logIn" class="oculto">
+				<h3>Log in</h3>
+				<form>
+					<!-- <span class="icon-mail"></span> -->
+					<input class="username" type="text" placeholder="Username o email">
+					<!-- <span class="icon-lock"></span> -->
+					<input class="confirmarClave" type="text" placeholder="Password">	
+					<input class="boton" type="button" value="Login" onclick="verTopHits()">
+				</form>
+			</section>
+			<div id="slogans">
+				<article id="escucha">
+					<figure>
+						<img src="img/escucha-big.jpg" alt="escucha.jpg" class="">
+						<img src="img/escucha-small.jpg" alt="escucha.jpg" class="">
+					</figure>
+					<h3>Escucha</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+				</article>
+				<article id="comparte">
+					
+					<figure>
+						<img src="img/comparte-big.jpg" alt="comparte" >
+						<img src="img/comparte-small.jpg" alt="comparte" >
+					</figure>
+					<h3>Comparte</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+				</article>
+				<article id="crea">
+					<figure>
+						<img src="img/crea-big.jpg" alt="crea y escucha" >
+						<img src="img/crea-small.jpg" alt="crea y escucha" >
+					</figure>
+					<h3>Crea y sigue playlists</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+				</article>
+				<h4 class="empieza">Empieza a escuchar ya</h4>
+			</div>
+		</section> 
+		<section id="topHits" class="oculto">
+			<div class="cabeceraSeccion">
+				<a class="icono-menu-emergente"  onclick="verMenuEmergente()">
+					<span class="icono_1 icon-menu"></span>
+				</a>
+				<!-- <figure onclick="verMenuEmergente()">
+					<img src="img/iconoMenu.png" alt="menú" >
+				</figure> -->
+				<h3>Top Hits</h3>
+			</div>
+			<div class="hits">
+				<article class="hit interactua">
+					<figure onclick="verAlbum()">
+						<img src="img/caratula_1.jpg" alt="Girl">
+					</figure>
+					<h4 onclick="verCancion()">Girl</h4>
+					<p onclick="verArtista()">Pharrell Willians</p>
+				</article>
+				<article class="hit ">
+					<figure>
+						<img src="img/caratula_2.jpg" alt="Girl">
+					</figure>
+					<h4>Love Letters</h4>
+					<p>Metronomy</p>
+				</article>
+				<article class="hit ">
+					<figure>
+						<img src="img/caratula_3.jpg" alt="Girl">
+					</figure>
+					<h4>Present Tense</h4>
+					<p>Wild Beasts</p>
+				</article>
+				<article class="hit ">
+					<figure>
+						<img src="img/caratula_4.jpg" height="128" width="128" alt="Girl">
+					</figure>
+					<h4>Little red</h4>
+					<p>Katy B</p>
+				</article>
+				<article class="hit ">
+					<figure>
+						<img src="img/caratula_5.jpg" height="128" width="128" alt="Girl">
+					</figure>
+					<h4>The power and the glory</h4>
+					<p>Perc</p>
+				</article>
+				<article class="hit ">
+					<figure>
+						<img src="img/caratula_6.jpg" height="128" width="128" alt="Girl">
+					</figure>
+					<h4>Adhesive</h4>
+					<p>Containe</p>
+				</article>
+				<article class="hit">
+					<figure>
+						<img src="img/caratula_7.jpg" alt="Girl">
+					</figure>
+					<h4>Girl</h4>
+					<p>Pharrell Willians</p>
+				</article>
+				<article class="hit ">
+					<figure>
+						<img src="img/caratula_9.jpg" alt="Girl">
+					</figure>
+					<h4>Love Letters</h4>
+					<p>Metronomy</p>
+				</article>
+				<article class="hit">
+					<figure>
+						<img src="img/caratula_1.jpg" alt="Girl">
+					</figure>
+					<h4>Girl</h4>
+					<p>Pharrell Willians</p>
+				</article>
+				<article class="hit ">
+					<figure>
+						<img src="img/caratula_2.jpg" alt="Girl">
+					</figure>
+					<h4>Love Letters</h4>
+					<p>Metronomy</p>
+				</article>
+				<article class="hit ">
+					<figure>
+						<img src="img/caratula_3.jpg" alt="Girl">
+					</figure>
+					<h4>Present Tense</h4>
+					<p>Wild Beasts</p>
+				</article>
+				<article class="hit ">
+					<figure>
+						<img src="img/caratula_4.jpg" height="128" width="128" alt="Girl">
+					</figure>
+					<h4>Little red</h4>
+					<p>Katy B</p>
+				</article>
+				<article class="hit ">
+					<figure>
+						<img src="img/caratula_5.jpg" height="128" width="128" alt="Girl">
+					</figure>
+					<h4>The power and the glory</h4>
+					<p>Perc</p>
+				</article>
+				<article class="hit ">
+					<figure>
+						<img src="img/caratula_6.jpg" height="128" width="128" alt="Girl">
+					</figure>
+					<h4>Adhesive</h4>
+					<p>Containe</p>
+				</article>
+				<article class="hit">
+					<figure>
+						<img src="img/caratula_7.jpg" alt="Girl">
+					</figure>
+					<h4>Girl</h4>
+					<p>Pharrell Willians</p>
+				</article>
+			</div>
+		</section>
+		<section id="cancion" class="oculto">
+			<div class="caratula">
+				<figure>
+					<img src="img/caratula_2.jpg" alt="menú">
+				</figure>
+				<a class="icono-menu-emergente"  onclick="verMenuEmergente()">
+					<span class="icono_1 icon-menu"></span>
+				</a>
+				<div class="acciones">
+					<a href="#" class="accion blanco icon-add" onclick="verMenuPlaylist()"></a>
+					<a href="#" class="accion blanco icon-love"></a>
+					<a href="#" class="accion blanco icon-share" onclick="verFormularioComparte()"></a>
+				</div>
+			</div>
+			<div id="reproductor" >
+				<div class="progress">
+						<span class="min">0:45</span>
+						<div class="total">
+							<div class="state">
+								<div class="circle">
+									
+								</div>
+							</div>
+						</div>
+						<span class="max">4:10</span>
+				</div>
+				<div class="detalle">
+					<h3>Come Get It Be</h3>
+					<p>Pharrell Willians</p>
+				</div>
+				<div class="control">
+					<a href="#" class="accion gris-medio icon-prev"></a>
+					<a href="#" class="accion gris-oscuro icon-play"></a>
+					<a href="#" class="accion gris-medio icon-next"></a>
+					<a href="#" class="accion gris-medio icon-random"></a>
+					<a href="#" class="accion gris-medio icon-vol"></a>
+				</div>
+			</div>
+		</section>
+		<section id="album" class="oculto">
+			<div class="caratula">
+				<figure>
+					<img src="img/caratula_9.jpg" alt="menú">
+				</figure>
+				<a class="icono-menu-emergente"  onclick="verMenuEmergente()">
+				<span class="icono_1 icon-menu"></span>
+				</a>
+				<div class="acciones">
+					<a href="#" class="accion blanco icon-add" onclick="verMenuPlaylist()"></a>
+					<a href="#" class="accion blanco icon-love"></a>
+					<a href="#" class="accion blanco icon-share" onclick="verFormularioComparte()"></a>
+				</div>
+			</div>
+			<div id="listadoAlbum">
+				<article class="titulo-artista">
+					<h4 class="titulo">Slap that tomorrow beetz</h4>
+					<p class="artista">Baby G</p>
+				</article>
+				<ul class="canciones-album">
+					<li class="interactua item-cancion" onclick="verCancion()">
+						<p>The upsetter</p>
+						<a href="#" class="accion icon-share" onclick="verFormularioComparte()"></a>
+						<a href="#" class="accion icon-love"></a>
+						<a href="#" class="accion icon-add" onclick="verMenuPlaylist()"></a>
+					</li>
+					<li class="item-cancion">
+						<p>I'm aquarius</p>
+						<a href="#" class="accion icono_1 icon-share"></a>
+						<a href="#" class="accion icono_1 icon-love"></a>
+						<a href="#" class="accion icono_1 icon-add"></a>
+					</li>
+					<li class="item-cancion">
+						<p>Love letters</p>
+						<a href="#" class="accion icono_1 icon-share"></a>
+						<a href="#" class="accion icono_1 icon-love"></a>
+						<a href="#" class="accion icono_1 icon-add"></a>
+					</li>
+					<li class="item-cancion">
+						<p>Boy racers</p>
+						<a href="#" class="accion icono_1 icon-share"></a>
+						<a href="#" class="accion icono_1 icon-love"></a>
+						<a href="#" class="accion icono_1 icon-add"></a>
+					</li>
+					<li class="item-cancion">
+						<p>Call me</p>
+						<a href="#" class="accion icono_1 icon-share"></a>
+						<a href="#" class="accion icono_1 icon-love"></a>
+						<a href="#" class="accion icono_1 icon-add"></a>
+					</li>
+				</ul>
+			</div>
+		</section>	
+		<section id="search" class="oculto">
+			<div class="cabeceraSeccion">
+				<a class="icono-menu-emergente"  onclick="verMenuEmergente()">
+					<span class="icono_1 icon-menu"></span>
+				</a>
+				<h3>Search</h3>
+			</div>
+			<input type="text" class="caja-busqueda" placeholder="coolio">
+			<span class="icon-search "></span>
+			<section class="listado artista">
+				<h3>Artistas</h3>
+				<p class="todosB">
+					<a href="#">Mostrar todos</a>
+				</p>
+				<ul >
+					<li>
+						<figure>
+							<img src="img/pharrell_1.jpeg" alt="Girl" width="39" height="39">
+						</figure>
+						<p>Pharrell Willians</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/Michael-Jackson_hot_.jpg" alt="Michael Jackson" width="39" height="39">
+						</figure>
+						<p>Michael Jackson</p>
+					</li>
+					<li class="todosA"><a href="#">Ver todos los artistas</a></li>
+				</ul>
+			</section>
+			<section class="listado albumes">
+				<h3>Albumes</h3>
+				<p class="todosB">
+					<a href="#">Mostrar todos</a>
+				</p>
+				<ul id="albumes">
+					<li>
+						<figure>
+							<img src="img/hitGirl.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Cool</h4>
+						<p>Gwen Stefani</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitLoveLetters.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Play it cool</h4>
+						<p>Super Furry Animals</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitGirl.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Cool kids</h4>
+						<p>Bathtub surfers</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitGirl.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Play it cool</h4>
+						<p>Super Furry Animals</p>
+					</li>
+					<li class="todosA"><a href="#">Ver todos los álbumes</a></li>
+				</ul>
+			</section>
+			<section class="listado canciones">
+				<h3>Canciones</h3>
+				<p class="todosB">
+					<a href="#">Mostrar todos</a>
+				</p>
+				<ul >
+					<li>
+						<figure>
+							<img src="img/hitGirl.jpg" alt=	"Girl" width="39" height="39">
+						</figure>
+						<h4>Cool</h4>
+						<p>Gwen Stefani</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitLoveLetters.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Play it cool</h4>
+						<p>Super Furry Animals</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitPresentTense.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Cool kids</h4>
+						<p>Bathtub surfers</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitThePowerAndTheGlory.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Play it cool</h4>
+						<p>Super Furry Animals</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitGirl.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Cool</h4>
+						<p>Gwen Stefani</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitLoveLetters.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Play it cool</h4>
+						<p>Super Furry Animals</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitPresentTense.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Cool kids</h4>
+						<p>Bathtub surfers</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitThePowerAndTheGlory.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Play it cool</h4>
+						<p>Super Furry Animals</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitGirl.jpg" alt=	"Girl" width="39" height="39">
+						</figure>
+						<h4>Cool</h4>
+						<p>Gwen Stefani</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitLoveLetters.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Play it cool</h4>
+						<p>Super Furry Animals</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitPresentTense.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Cool kids</h4>
+						<p>Bathtub surfers</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitThePowerAndTheGlory.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Play it cool</h4>
+						<p>Super Furry Animals</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitGirl.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Cool</h4>
+						<p>Gwen Stefani</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitLoveLetters.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Play it cool</h4>
+						<p>Super Furry Animals</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitPresentTense.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Cool kids</h4>
+						<p>Bathtub surfers</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitThePowerAndTheGlory.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Play it cool</h4>
+						<p>Super Furry Animals</p>
+					</li>
+					<li class="todosA"><a href="#">Ver todas las canciones</a></li>
+				</ul>			
+			</section>
+		</section>
+		<section id="perfilArtista" class="oculto">
+			<div id="headerArtista">
+				<figure>
+					<img src="img/pharrell_2.jpg" alt="">
+				</figure>
+				<a class="icono-menu-emergente"  onclick="verMenuEmergente()">
+					<span class="icono_1 icon-menu"></span>
+				</a>
+				<h2 class="absolute">Pharrell Willians</h2>
+			</div>
+			<div id="hitsArtista">
+				<h3>Top hits</h3>
+				<ul class="listado">
+					<li>
+						<figure>
+							<img src="img/hitGirl.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<p>Cool</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitLoveLetters.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<p>Play it cool</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitPresentTense.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<p>Cool kids</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitThePowerAndTheGlory.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<p>Play it cool</p>
+					</li>
+				</ul>
+			</div>
+			<div id="albumsArtista">
+				<h3>Álbums
+				<span class="icon-menu"></span>
+				<span class="icon-miniaturas"></span>
+				</h3>
+				<article class="hit">
+					<figure>
+						<img src="img/hitGirl.jpg" height="128" width="128" alt="Girl">
+					</figure>
+					<h4>Girl</h4>
+					<p>Pharrell Williams</p>
+				</article>
+				<article class="hit">
+					<figure>
+						<img src="img/hitGirl.jpg" height="128" width="128" alt="Girl">
+					</figure>
+					<h4>In My Mind</h4>
+					<p>Pharrell Williams</p>
+				</article>
+				<article class="hit">
+					<figure>
+						<img src="img/hitGirl.jpg" height="128" width="128" alt="Girl">
+					</figure>
+					<h4>In My Mind</h4>
+					<p>Pharrell Williams</p>
+				</article>
+				<article class="hit">
+					<figure>
+						<img src="img/hitGirl.jpg" height="128" width="128" alt="Girl">
+					</figure>
+					<h4>In My Mind</h4>
+					<p>Pharrell Williams</p>
+				</article>
+				<article class="hit">
+					<figure>
+						<img src="img/hitGirl.jpg" height="128" width="128" alt="Girl">
+					</figure>
+					<h4>In My Mind</h4>
+					<p>Pharrell Williams</p>
+				</article>
+				<article class="hit">
+					<figure>
+						<img src="img/hitGirl.jpg" height="128" width="128" alt="Girl">
+					</figure>
+					<h4>In My Mind</h4>
+					<p>Pharrell Williams</p>
+				</article>
+			</div>
+			<!-- Div de limpieza -->
+			<div class="limpieza"></div>	
+		</section>	
+		<section id="playlists" class="oculto">
+			<div class="cabeceraSeccion">
+				<a class="icono-menu-emergente"  onclick="verMenuEmergente()">
+					<span class="icono_1 icon-menu"></span>
+				</a>
+				<h3>Playlists</h3>
+			</div>
+			<div class="listaVacia">
+				<figure>
+					<img src="img/iconoMano.png" alt="Animate">
+				</figure>
+				<p>Todavía no sigues ninguna playlist, empieza  a escuchar y a descubrir</p>
+			</div>
+			<div class="listadoListas">
+				<div class="verMisListas">
+					<span class=" icon-menu"></span>
+					<a href="#">Ver mis listas</a>
+				</div>
+				<p class="cabListPlaylist">Popular playlist</p>
+				<ul>
+					<li class="interactua" onclick=" verPlaylistAbierta()">
+						<figure>
+						<img src="img/hitGirl.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Cool</h4>
+						<p>Gwen Stefani</p>
+					</li>
+					<li>
+						<figure>
+						<img src="img/hitLoveLetters.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Play it cool</h4>
+						<p>Super Furry Animals</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitPresentTense.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<h4>Cool kids</h4>
+						<p>Bathtub surfers</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitLittleRed.jpg"  width="39" height="39" alt="Girl">
+						</figure>
+						<h4>Work</h4>
+						<p>Gwen Stefani</p>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitThePowerAndTheGlory.jpg"  width="39" height="39" alt="Girl">
+						</figure>
+						<h4>Hard work</h4>
+						<p>Wiz Khalifa</p>
+					</li>
+					<li>
+						<figure>
+						<img src="img/hitAdhesive.jpg" height="39" width="39" alt="Girl">
+						</figure>
+						<h4>Smoke on the water</h4>
+						<p>Deep Purple</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section id="playlistAbierta" class="oculto">
+			<div class="cabeceraSeccion">
+				<a class="icono-menu-emergente"  onclick="verMenuEmergente()">
+					<span class="icono_1 icon-menu"></span>
+				</a>
+				<h3>Playlists</h3>
+			</div>
+			<section id="seguirPlaylist">
+				<figure>
+					<img src="img/hitLittleRed.jpg" alt="" width="39" height="39">
+				</figure>
+				<div  class="">
+					<h4>Kill the switch</h4>
+					<p>by <a href="#">betaromeo</a></p>
+					<input type="button" class="boton" value="Seguir playlist">
+				</div>
+			</section>
+			<section class="listadoPlaylist ">
+				<ol>
+					<li>
+						<figure>
+							<img src="img/hitGirl.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<div  class="datos-cancion">
+							<h4>Cool</h4>
+							<p>Gwen Stefani</p>
+						</div>
+						<div class="acciones-small">
+							<a href="#" class="accion icono_2 icon-add"></a>
+							<a href="#" class="accion icono_2 icon-love"></a>
+							<a href="#" class="accion icono_2 icon-share"></a>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitLoveLetters.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<div class="datos-cancion">
+							<h4>Play it cool</h4>
+							<p>Super Furry Animals</p>
+						</div>
+						<div class="acciones-small">
+							<a href="#" class="accion icono_2 icon-add"></a>
+							<a href="#" class="accion icono_2 icon-love"></a>
+							<a href="#" class="accion icono_2 icon-share"></a>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitPresentTense.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<div class="datos-cancion">
+							<h4>Cool kids</h4>
+							<p>Bathtub surfers</p>
+						</div>
+						<div class="acciones-small">
+							<a href="#" class="accion icono_2 icon-add"></a>
+							<a href="#" class="accion icono_2 icon-love"></a>
+							<a href="#" class="accion icono_2 icon-share"></a>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitThePowerAndTheGlory.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<div class="datos-cancion">
+							<h4>Play it cool</h4>
+							<p>Super Furry Animals</p>
+						</div>
+						
+						<div class="acciones-small">
+							<a href="#" class="accion icono_2 icon-add"></a>
+							<a href="#" class="accion icono_2 icon-love"></a>
+							<a href="#" class="accion icono_2 icon-share"></a>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitThePowerAndTheGlory.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<div class="datos-cancion">
+							<h4>Play it cool</h4>
+							<p>Super Furry Animals</p>
+						</div>
+						
+						<div class="acciones-small">
+							<a href="#" class="accion icono_2 icon-add"></a>
+							<a href="#" class="accion icono_2 icon-love"></a>
+							<a href="#" class="accion icono_2 icon-share"></a>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="img/hitThePowerAndTheGlory.jpg" alt="Girl" width="39" height="39">
+						</figure>
+						<div class="datos-cancion">
+							<h4>Play it cool</h4>
+							<p>Super Furry Animals</p>
+						</div>
+						
+						<div class="acciones-small">
+							<a href="#" class="accion icono_2 icon-add"></a>
+							<a href="#" class="accion icono_2 icon-love"></a>
+							<a href="#" class="accion icono_2 icon-share"></a>
+						</div>
+					</li>
+				</ol>			
+			</section>
+		</section>
+		<section id="perfil" class="oculto">
+			<div class="cabeceraSeccion">
+				<a class="icono-menu-emergente"  onclick="verMenuEmergente()">
+					<span class="icono_1 icon-menu"></span>
+				</a>
+				<h3>Perfil</h3>
+			</div>
+			<div class="cabeceraPerfil">
+				<a href="#" class="icon-atras oculto edit" onclick="volverPerfil()"></a>
+				<!-- <a href="#" class="edit" onclick="volverPerfil()">Profile <span>>Edit</span</a> -->
+				<figure>
+					<img src="img/avatarPerfil.jpg" height="112" width="112" alt="">
+				</figure>
+				<a href="#" class="oculto edit">Cambiar foto</a>
+				<h4>Masterofdisaster</h4>
+				<input type="button" id="botonEditarPerfil" class="boton edit" value="Edit" onclick="verEditarPerfil();ocultarBotonEditarPerfil();" >
+			</div>
+			<form id="editarPerfil" class=" oculto" action="submit">
+				<h4>Nombre</h4>
+				<input type="text" value="Camila Casallas" placeholder="ejem. Manolo García">
+				<h4>Usuario</h4>
+				<input type="text" value="Camila Casallas" placeholder="ejem. jineteLoco">
+				<h4>Correo Electrónico</h4>
+				<input type="text" value="masterofdisabter@jaleo.com" placeholder="ejemplo@ejemplo.com">
+				<input type="button" value="Confirmar" class="boton" />
+				<a href="#" onclick="verCambiarPassword()">Cambiar contraseña</a>
+			</form>
+			<form id="cambiarPassword"class=" oculto" action="submit">
+				<input type="text"  placeholder="old password">
+				<input type="text"  placeholder="new password">
+				<input type="text"  placeholder="Confirm password">
+				<input type="button" value="Change" class="boton" />
+			</form>
+			<div class="limpieza"></div>
+			<div id="listas">
+				<div id="menuPerfilListas">
+					<nav class="menu">
+						<ul >
+							<li class="item" onclick="verMisListas()">Me</li>
+							<li class="item" onclick="verSiguiendoListas()">Following</li>
+						</ul>
+					</nav>
+				</div>
+				<section id="misListas" class="listadoListas oculto">
+					<h4 class="tituloTipoLista rojo"><span class="icon-list-miniaturas"></span>My Playlists</h4>
+					<ul>
+						<li>
+							<figure>
+							<img src="img/hitGirl.jpg" alt="Girl" width="39" height="39">
+							</figure>
+							<h4>Killing the switch</h4>
+							<p>By Masterofdisaster</p>
+						</li>
+						<li>
+							<figure>
+							<img src="img/hitLoveLetters.jpg" alt="Girl" width="39" height="39">
+							</figure>
+							<h4>Play it cool</h4>
+							<p>By Masterofdisaster</p>
+						</li>
+						<li>
+							<figure>
+								<img src="img/hitPresentTense.jpg" alt="Girl" width="39" height="39">
+							</figure>
+							<h4>Cool kids</h4>
+							<p>By Masterofdisaster</p>
+						</li>
+					</ul>
+				</section>
+				<section id="noListasPropias" class="oculto">
+					<div class="listaVacia">
+						<figure>
+							<img src="img/icon-crearlista.png" alt="Crea tu propia lista">
+						</figure>
+						<a href="#" class="">Crea tu propia lista</a>
+					</div>
+				</section>
+				<section id="siguiendoListas" class="listadoListas oculto">
+					<h4 class="tituloTipoLista rojo"><span class="icon-list-miniaturas"></span>Following</h4>
+					<ul>
+						<li>
+							<figure>
+							<img src="img/caratula_5.jpg" alt="Girl" width="39" height="39">
+							</figure>
+							<h4>Love love love</h4>
+							<p>By Mermelada</p>
+						</li>
+						<li>
+							<figure>
+							<img src="img/caratula_6.jpg" alt="Girl" width="39" height="39">
+							</figure>
+							<h4>PremTension</h4>
+							<p>By CarlosP</p>
+						</li>
+						<li>
+							<figure>
+								<img src="img/caratula_7.jpg" alt="Girl" width="39" height="39">
+							</figure>
+							<h4>Heavy heavy</h4>
+							<p>By Jianfe66</p>
+						</li>
+					</ul>
+				</section>
+				<section id="noSiguiendoListas" class="">
+					<div class="listaVacia">
+						<figure>
+							<img src="img/iconoMano.png" alt="Animate">
+						</figure>
+						<p>Todavía no sigues ninguna playlist, empieza  a escuchar y a descubrir</p>
+					</div>
+				</section>	
+			</div>
+		</section>
+		<section id="pie" class="">
+			<img src="img/logoPie.png" alt="log" id="logoPie">
+			<a href="#">about us</a>
+			<a href="#">legal</a>
+		</section>			
+		<!-- Desplegables -->
+		<nav id="menuEmergente" class="emergente oculto">
+			<input type="text" class="caja-busqueda">
+			<span class="icono_1 icon-search "></span>
+			<ul class="">
+				<li class="item" onclick="verTopHits()">Top hits</li>
+				<li class="item" onclick="verPerfil()">Profile</li>
+				<li class="item">Settings</li>
+				<li class="item">My likes</li>
+				<li class="item" onclick="verPlaylist()">Playlist</li>
+				<li class="item">Logout</li>
+			</ul>
+		</nav>
+		<nav id="menuPlaylist" class=" emergente oculto">
+			<p class="cerrar" onclick="ocultarMenuPlaylist()">x</p>
+			<ul>
+				<li><a href="" >Add a playlist</a></li>
+				<li><a href="#">+ New playlist</a></li>
+				<li><a href="#">Happy Trigger</a></li>
+				<li><a href="#">Kill the switch</a></li>
+			</ul>
+		</nav>
+		<form id="formularioComparte" class="emergente oculto">
+			<p class="cerrar" onclick="ocultarFormularioComparte()">x</p>
+			<h3>Comparte</h3>
+			<textarea name="mensajeCompartir" id="mensajeCompartir" class="mensaje" cols="1" rows="3">#listening to Brand New by Pharrell Williams on #sfotipy</textarea>
+			<a href="#" class="accion blanco facebook icon-facebook"></a>
+			<a href="#" class="accion blanco  icon-twitter twitter"></a>
+			<input class="boton" type="button" value="Comparte">
+		</form >
+		<div class="limpieza"></div>
+	
+	</div>
+
+	/****************************************/
+	/*********** javaScript *****************/
+	<script src="js/main.js"></script>
+
+	<script>
+		iniciar();
+	</script>
+	
+</body>
+</html>
+			

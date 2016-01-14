@@ -1,0 +1,1415 @@
+@font-face {
+  font-family: 'sfotipy';
+  src: url("../fonts/sfotipy.eot?262dv8");
+  src: url("../fonts/sfotipy.eot?#iefix262dv8") format('embedded-opentype'), url("../fonts/sfotipy.woff?262dv8") format('woff'), url("../fonts/sfotipy.ttf?262dv8") format('truetype'), url("../fonts/sfotipy.svg?262dv8#sfotipy") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'sfotipy';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+/* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-list-miniaturas:before {
+  content: "\e600";
+}
+.icon-miniaturas:before {
+  content: "\e615";
+}
+.icon-desplegable:before {
+  content: "\e601";
+}
+.icon-atras:before {
+  content: "\e602";
+}
+.icon-search:before {
+  content: "\e603";
+}
+.icon-lock:before {
+  content: "\e604";
+}
+.icon-user:before {
+  content: "\e605";
+}
+.icon-share:before {
+  content: "\e606";
+}
+.icon-random:before {
+  content: "\e607";
+}
+.icon-love:before {
+  content: "\e608";
+}
+.icon-add:before {
+  content: "\e609";
+}
+.icon-mute:before {
+  content: "\e60a";
+}
+.icon-vol:before {
+  content: "\e60b";
+}
+.icon-play:before {
+  content: "\e60c";
+}
+.icon-next:before {
+  content: "\e60d";
+}
+.icon-prev:before {
+  content: "\e60e";
+}
+.icon-stop:before {
+  content: "\e60f";
+}
+.icon-sfotipy:before {
+  content: "\e610";
+}
+.icon-menu:before {
+  content: "\e611";
+}
+.icon-mail:before {
+  content: "\e612";
+}
+.icon-facebook:before {
+  content: "\e613";
+}
+.icon-twitter:before {
+  content: "\e614";
+}
+body {
+  background: red;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+}
+h2,
+h3,
+h4,
+figure,
+img,
+p,
+span,
+ul {
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  font-weight: lighter;
+}
+ul {
+  list-style: none;
+}
+/***********OOCSS************/
+.blanco {
+  color: #fff;
+}
+.gris-medio {
+  color: #999;
+}
+.gris-oscuro {
+  color: #333;
+}
+.oculto {
+  display: none;
+}
+.username {
+  background-image: url("../imagenes/icon-username.png");
+}
+.email {
+  background-image: url("../imagenes/icon-email.png");
+}
+.confirmarClave {
+  background-image: url("../imagenes/icon-lock.png");
+}
+.elegirClave {
+  background-image: url("../imagenes/icon-lock.png");
+}
+/**** Elementos ocultos  en la vista movil****/
+#menu,
+#cabeceraEscritorio,
+.cabListPlaylist,
+.enlace01,
+.enlace02,
+.todosB {
+  display: none;
+}
+/********** IDs sections******/
+#album {
+  margin: 0 auto;
+  padding: 0;
+}
+#album #listadoAlbum {
+  margin: 0 auto;
+}
+#album #listadoAlbum .canciones-album li {
+  border-top: 1px solid #ccc;
+  font-size: 0.9em;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 5% 0 5%;
+  width: 90%;
+}
+#album #listadoAlbum .canciones-album li p {
+  color: #333;
+  display: inline-block;
+  line-height: 3em;
+}
+#album #listadoAlbum .canciones-album li .accion {
+  color: #999;
+  float: right;
+  font-size: 0.9em;
+  display: inline-block;
+  height: 3.2em;
+  line-height: 3.2em;
+  padding: 0 3px;
+}
+#album #listadoAlbum .canciones-album li .icon-love:active {
+  color: #f00;
+}
+#album #listadoAlbum .titulo-artista {
+  padding: 0.8em 0 0.8em 5%;
+}
+#album #listadoAlbum .titulo-artista h4 {
+  color: #333;
+  font-weight: lighter;
+}
+#album #listadoAlbum .titulo-artista p {
+  color: #999;
+  font-size: 1em;
+}
+#cancion {
+  background: #fff;
+  height: auto;
+  margin-bottom: 1em;
+  position: relative;
+}
+#cancion #reproductor {
+  text-align: center;
+}
+#cancion #reproductor .control {
+  width: 100%;
+}
+#cancion #reproductor .detalle {
+  border-bottom: 2px solid #ccc;
+  height: 3em;
+  margin: 0 auto 10px;
+  width: 80%;
+}
+#cancion #reproductor .progress {
+  margin: 1em 0;
+  position: relative;
+}
+#cancion #reproductor .progress .min,
+#cancion #reproductor .progress .max {
+  font-size: 0.8em;
+  position: absolute;
+  top: -5px;
+}
+#cancion #reproductor .progress .min {
+  left: 0.5em;
+}
+#cancion #reproductor .progress .max {
+  right: 0.5em;
+}
+#cancion #reproductor .progress .total {
+  background: #ccc;
+  border-radius: 5px;
+  height: 5px;
+  margin: 0 auto;
+  width: 75%;
+}
+#cancion #reproductor .progress .state {
+  animation: 10s state infinite linear;
+  background: #c36;
+  border-radius: 5px;
+  height: 5px;
+  position: relative;
+  width: 30%;
+}
+#cancion #reproductor .progress .circle {
+  background: #333;
+  border-radius: 50%;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 10px;
+  animation: 1s circle infinite;
+}
+#contenedor {
+  margin: 0 auto;
+  padding: 0.4em;
+}
+#paginaInicio {
+  margin: 0 auto;
+}
+#paginaInicio #crearCuenta,
+#paginaInicio #logIn {
+  border-bottom: 1px solid #999;
+  border-top: 1px solid #999;
+  height: auto;
+  margin: 0 auto 2em auto;
+  padding: 1em 0;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  width: 18em;
+}
+#paginaInicio #crearCuenta h3,
+#paginaInicio #logIn h3 {
+  margin-bottom: 1em;
+  text-align: center;
+}
+#paginaInicio #crearCuenta form,
+#paginaInicio #logIn form {
+  margin: 0 auto;
+}
+#paginaInicio #crearCuenta form input,
+#paginaInicio #logIn form input {
+  background-position: 1em 50%;
+  background-repeat: no-repeat;
+  background-size: 1.4em auto;
+  border-radius: 0.5em;
+  height: 3em;
+  margin: 0 0 0.8em 0;
+  padding: 0 0 0 3em;
+  width: 14em;
+}
+#paginaInicio #crearCuenta form .boton,
+#paginaInicio #logIn form .boton {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  width: 17em;
+}
+#paginaInicio #registrar {
+  height: 5em;
+  margin: 0 auto;
+  text-align: center;
+}
+#paginaInicio #registrar a {
+  color: #333;
+  display: inline-block;
+  font-size: 0.8em;
+  height: 40px;
+  line-height: 40px;
+  margin: 1em auto;
+  padding: 0;
+  text-align: center;
+  width: 48%;
+}
+#paginaInicio #registrar a:first-child {
+  border-right: 2px solid #999;
+}
+#paginaInicio #slogans article {
+  text-align: center;
+}
+#paginaInicio #slogans article img {
+  max-width: 100%;
+}
+#paginaInicio #slogans article img:nth-of-type(2) {
+  display: none;
+}
+#paginaInicio #slogans article p {
+  color: #999;
+  font-size: 0.9em;
+  margin: 0 auto 1em auto;
+  width: 70%;
+}
+#paginaInicio #slogans .empieza {
+  border-top: 1px solid #999;
+  color: #ccc;
+  font-weight: lighter;
+  padding: 1em 0;
+  text-align: center;
+}
+#paginaInicio #social {
+  background: #000;
+  background-image: url("../imagenes/fondoSocial-big.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  color: #fff;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 3em;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+#paginaInicio #social figure {
+  padding: 0;
+}
+#paginaInicio #social img {
+  padding-top: 4em;
+  width: 220px;
+}
+#paginaInicio #social .facebook {
+  background: #369;
+}
+#paginaInicio #social .facebook .icono_1 {
+  border-right: 2px solid #036;
+}
+#paginaInicio #social .botonSocial .icono_1 {
+  display: inline-block;
+  float: left;
+  font-size: 1.5em;
+  height: 1em;
+  line-height: 1em;
+  padding: 0.3em;
+  margin: 0.2em 0.3em 0 0;
+  width: 1em;
+}
+#paginaInicio #social .twitter {
+  background: #69c;
+}
+#paginaInicio #social .twitter .icono_1 {
+  border-right: 2px solid #369;
+}
+#playlists {
+  margin: 0 auto;
+  width: 100%;
+}
+#playlists .listaVacia {
+  display: none;
+}
+#playlists .titulo-artista :first-child {
+  color: #333;
+  margin-bottom: 0;
+}
+#playlists .titulo-artista :nth-child(2) {
+  color: #999;
+  margin-top: 0.4em;
+}
+#playlistAbierta #seguirPlaylist {
+  border-bottom: 2px solid #999;
+  height: 5em;
+  padding: 1em;
+  position: relative;
+}
+#playlistAbierta #seguirPlaylist figure {
+  display: inline-block;
+}
+#playlistAbierta #seguirPlaylist h4,
+#playlistAbierta #seguirPlaylist p {
+  display: inline-block;
+  font-size: 0.8em;
+}
+#playlistAbierta #seguirPlaylist h4 {
+  left: 5em;
+  position: absolute;
+  top: 1.5em;
+}
+#playlistAbierta #seguirPlaylist p {
+  color: #ccc;
+  left: 5em;
+  position: absolute;
+  top: 2.5em;
+}
+#playlistAbierta #seguirPlaylist p a {
+  color: #c36;
+}
+#playlistAbierta #seguirPlaylist .boton {
+  font-size: 0.8em;
+  left: 65px;
+  padding: 0 1em;
+  position: absolute;
+}
+#perfil #editarPerfil,
+#perfil #cambiarPassword {
+  padding: 1em;
+  color: #999;
+h4
+}
+#perfil #editarPerfil a,
+#perfil #cambiarPassword a {
+  color: #c36;
+  display: block;
+  text-align: center;
+}
+#perfil #editarPerfil input,
+#perfil #cambiarPassword input {
+  border-radius: 4px;
+  line-height: 2.5em;
+  margin: 1em 0;
+  padding-left: 1em;
+  width: 90%;
+}
+#perfil #editarPerfil .boton,
+#perfil #cambiarPassword .boton {
+  width: 100%;
+}
+#perfil #noListasPropias a {
+  color: #c36;
+}
+#perfil .cabeceraPerfil {
+  padding: 1em;
+  position: relative;
+  text-align: center;
+}
+#perfil .cabeceraPerfil a {
+  color: #c36;
+  font-size: 0.9em;
+}
+#perfil .cabeceraPerfil h4 {
+  color: #999;
+  font-size: 1.2em;
+  margin: 1em 0;
+  text-align: center;
+}
+#perfil .cabeceraPerfil img {
+  border-radius: 50%;
+}
+#perfil .cabeceraPerfil .boton {
+  font-size: 0.8em;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  padding: 0 1em;
+}
+#perfil .cabeceraPerfil .icon-atras {
+  color: #999;
+  left: 1em;
+  position: absolute;
+  text-decoration: none;
+}
+#perfilArtista #headerArtista {
+  color: #333;
+  position: relative;
+}
+#perfilArtista #headerArtista h2 {
+  bottom: 0;
+  font-weight: normal;
+  left: 0;
+  line-height: 2em;
+  padding-left: 5%;
+  width: 95%;
+}
+#perfilArtista #headerArtista img {
+  height: auto;
+  width: 100%;
+}
+#perfilArtista #hitsArtista h3 {
+  border-bottom: 1px solid #999;
+  padding-bottom: 1em;
+  margin-top: 1em;
+  text-align: center;
+}
+#perfilArtista #albumsArtista h3 {
+  border-bottom: 1px solid #999;
+  padding-bottom: 1em;
+  margin-top: 1em;
+  text-align: left;
+}
+#perfilArtista #albumsArtista h3 span {
+  color: #333;
+  display: inline-block;
+  float: right;
+}
+#perfilArtista #albumsArtista h3 span:nth-of-type(2) {
+  margin: 0 0 0 0.5;
+  padding: 0 0.5em;
+}
+#perfilArtista #albumsArtista h3 span:nth-of-type(1) {
+  margin-right: 1em;
+}
+#pie {
+  background: #333;
+  clear: both;
+  height: 40px;
+}
+#pie a {
+  color: #fff;
+  display: inline;
+  font-size: 0.8em;
+  line-height: 40px;
+  margin: 0 20px;
+}
+#pie img {
+  margin: 0 3em 0 2.5px;
+  position: relative;
+  top: 7px;
+}
+#search {
+  height: auto;
+}
+#search .icon-search {
+  color: #c36;
+  font-size: 1.7em;
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+#topHits {
+  text-align: center;
+}
+/********** header **********/
+#cabeceraMovil {
+  background: #ccc;
+  height: 3.5em;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+#cabeceraMovil input {
+  height: 2em;
+  padding-left: 1em;
+  width: 60%;
+}
+#cabeceraMovil .icon-desplegable {
+  font-size: 1.3em;
+  padding-left: 0.3em;
+}
+#cabeceraEscritorio {
+  padding: 0.5em 1em;
+  border-bottom: 1px solid #ccc;
+  max-width: 1400px;
+}
+#cabeceraEscritorio form {
+  float: right;
+  font: 16px;
+  position: relative;
+}
+#cabeceraEscritorio form input {
+  height: 1.5em;
+  padding: 0 1em 0 2em;
+}
+#cabeceraEscritorio form .icon-search {
+  border-right: 1px solid #ccc;
+  color: #ccc;
+  left: 0.7em;
+  padding-right: 0.5em;
+  position: absolute;
+  top: 0.7em;
+}
+#cabeceraEscritorio form .icono-limpiar {
+  color: #ccc;
+  right: 0.7em;
+  padding-right: 0.5em;
+  position: absolute;
+  top: 0.6em;
+}
+#cabeceraEscritorio .usuarioA {
+  display: inline-block;
+  float: right;
+  margin: 0 1em;
+}
+#cabeceraEscritorio .logo {
+  display: inline-block;
+  margin-top: 0.5em;
+  vertical-align: middle;
+}
+#cabeceraEscritorio .search {
+  border-radius: 5px;
+}
+#cabeceraEscritorio .usuario {
+  display: inline-block;
+  vertical-align: middle;
+}
+#cabeceraEscritorio .usuario img {
+  border-radius: 50%;
+}
+#cabeceraEscritorio .nameUsuario {
+  color: #ccc;
+}
+#cabeceraEscritorio .nameUsuario:after {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 9px solid #ccc;
+  content: "";
+  display: inline-block;
+  margin-left: 0.4em;
+}
+/********** Emergentes ******/
+#menuPlaylist a {
+  text-decoration: none;
+  color: #fff;
+}
+#menuPlaylist ul {
+  margin-top: 2em;
+}
+#menuPlaylist ul li {
+  padding: 0.6em 0 0.6em 1em;
+  border-bottom: 2px solid #ccc;
+}
+#menuPlaylist ul :nth-child(1),
+#menuPlaylist ul :nth-child(2) {
+  padding: 0.6em 0 0.6em 0;
+}
+#menuEmergente ul {
+  font-size: 0.9em;
+  font-weight: lighter;
+  text-align: left;
+  width: 100%;
+}
+#menuEmergente ul li {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  height: 2em;
+  line-height: 2em;
+  margin: 0;
+  padding: 0.5em 0;
+  width: 100%;
+}
+#formularioComparte h3 {
+  color: #fff;
+  margin-bottom: 1em;
+}
+#formularioComparte .mensaje {
+  border-radius: 5px;
+  font-size: 0.8em;
+  margin: 0 0 1em 0;
+  padding: 1em;
+  text-align: justify;
+  width: 90%;
+}
+#formularioComparte .accion {
+  border-radius: 50%;
+  font-size: 1.5em;
+  height: 1em;
+  line-height: 1em;
+  padding: 0.3em;
+  margin: 0;
+  width: 1em;
+}
+#formularioComparte .boton {
+  width: 8em;
+  float: right;
+}
+#formularioComparte a:nth-of-type(1) {
+  background: #369;
+}
+#formularioComparte a:nth-of-type(2) {
+  background: #69c;
+}
+/**** Class ****/
+.accion {
+  display: inline-block;
+  font-size: 1.4em;
+  line-height: 3.5em;
+  margin-right: 0.5em;
+  text-decoration: none;
+}
+.acciones {
+  background: rgba(120,120,120,0.5);
+  bottom: 4px;
+  position: absolute;
+  width: 100%;
+}
+.boton {
+  background: #c36;
+  border: none;
+  border-radius: 0.5em;
+  color: #fff;
+  font-size: 1.1em;
+  height: 2.6em;
+  margin: 0;
+  padding: 0;
+}
+.boton a:nth-of-type(1) {
+  background: #ccc;
+}
+.boton a:nth-of-type(2) {
+  background: #69c;
+}
+.botonSocial {
+  border-radius: 0.5em;
+  color: #fff;
+  display: block;
+  height: 3em;
+  line-height: 3em;
+  margin: 0.7em auto;
+  text-align: left;
+  width: 218px;
+}
+.cabeceraSeccion {
+  border-bottom: solid 1px #999;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+.cabeceraSeccion .icono_1 {
+  font-size: 1em;
+  color: #000;
+}
+.cabeceraSeccion h3 {
+  margin: 20px 0;
+}
+.cabeceraSeccion .icono-menu-emergente {
+  top: 0;
+}
+.caja-busqueda {
+  border-radius: 0.6em;
+  margin: 1em 0 1em 0.5em;
+  padding-left: 0.8em;
+  width: 70%;
+  height: 2em;
+}
+.caratula {
+  position: relative;
+}
+.caratula figure img {
+  width: 100%;
+}
+.caratula .accion {
+  float: right;
+}
+.cerrar {
+  background-color: transparent;
+  color: #ccc;
+  font-size: 2em;
+  font-weight: lighter;
+  margin-bottom: 1em;
+  text-decoration: none;
+}
+.emergente {
+  background: rgba(0,0,0,0.75);
+  height: 100%;
+  padding: 1.5em;
+  position: absolute;
+  right: 0;
+  top: 4em;
+  max-width: 500px;
+  width: 75%;
+  z-index: 1;
+}
+.hit {
+  float: left;
+  font-size: 0.8em;
+  height: 180px;
+  overflow: hidden;
+  padding: 1em;
+  position: relative;
+  width: 128px;
+}
+.hit h4,
+.hit p {
+  margin: 0;
+}
+.hit img {
+  width: 128px;
+}
+.hits {
+  height: auto;
+  overflow: hidden;
+  width: auto;
+}
+.icono_1 {
+  color: #fff;
+  font-size: 1.2em;
+}
+.icon-love:active {
+  color: #f00;
+}
+.icono-menu-emergente {
+  position: absolute;
+  font-size: 1.5em;
+  left: 20px;
+  top: 20px;
+}
+.interactua {
+  background-color: #aaf;
+}
+.limpieza {
+  clear: both;
+}
+.listado {
+  font-size: 0.9em;
+  margin: 0 0.7em 0 0;
+  position: relative;
+}
+.listado a {
+  line-height: 2em;
+  color: #999;
+}
+.listado h3 {
+  line-height: 2.5em;
+  padding-left: 1em;
+}
+.listado li {
+  border-bottom: 1px solid #999;
+  margin: 0;
+  padding: 0.6em 1em;
+}
+.listado li figure {
+  display: inline-block;
+  vertical-align: middle;
+}
+.listado li h4 {
+  display: inline-block;
+  margin-left: 0.7em;
+}
+.listado li p {
+  display: inline-block;
+  margin-left: 0.7em;
+}
+.listado ul {
+  border-top: 1px solid #ccc;
+}
+.listadoListas {
+  font-size: 0.9em;
+}
+.listadoListas a {
+  line-height: 2em;
+  color: #999;
+}
+.listadoListas h3 {
+  line-height: 2.5em;
+  padding-left: 1em;
+}
+.listadoListas li {
+  border-bottom: 1px solid #999;
+  height: auto;
+  overflow: hidden;
+  padding: 1em;
+}
+.listadoListas li figure {
+  display: inline-block;
+  float: left;
+}
+.listadoListas li figure img {
+  padding-right: 0.5em;
+}
+.listadoListas span {
+  background: #c36;
+  border-radius: 50%;
+  color: #fff;
+  display: none;
+  margin-right: 1em;
+  padding: 0.5em;
+}
+.listadoPlaylist ol {
+  list-style-position: inside;
+  padding: 0;
+}
+.listadoPlaylist ol li {
+  border-bottom: 1px solid #ccc;
+  height: 3em;
+  line-height: 3em;
+  padding: 0.5em 0;
+  position: relative;
+  width: 100%;
+}
+.listadoPlaylist ol li figure {
+  display: inline-block;
+  height: 39px;
+}
+.listadoPlaylist ol li figure img {
+  vertical-align: middle;
+}
+.listadoPlaylist ol li .datos-cancion {
+  display: inline-block;
+  font-size: 0.9em;
+  line-height: 1.3em;
+  margin-left: 0.5em;
+  position: absolute;
+  left: 4.5em;
+  top: 0.5em;
+}
+.listadoPlaylist ol li .datos-cancion h4 {
+  padding-top: 0.3em;
+}
+.listadoPlaylist ol li .acciones-small {
+  display: inline-block;
+  float: right;
+  margin-right: 0.5em;
+  line-height: 3em;
+}
+.listadoPlaylist ol li .acciones-small .icono_2 {
+  color: #999;
+  font-size: 0.7em;
+  margin: 0;
+  padding: 0;
+}
+.listadoPlaylist ol li .acciones-small .icon-love:active {
+  color: #f00;
+}
+.listaVacia {
+  color: #999;
+  margin-top: 1em;
+  padding: 2em 5em;
+  text-align: center;
+}
+.menu {
+  max-width: 1100px;
+}
+.menu .item {
+  border-top: 0.4em solid transparent;
+  color: #999;
+  display: inline-block;
+  font-size: 0.7em;
+  padding: 0 1em;
+  text-transform: uppercase;
+}
+.menu .item:hover {
+  border-top: 0.4em solid #999;
+}
+.parr-conecta {
+  float: left;
+  font-size: 0.7em;
+}
+.parr-social {
+  display: inline-block;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  text-align: center;
+  width: 95%;
+}
+.search {
+  border-radius: 0.8em;
+  height: 30px;
+  margin: 10px;
+}
+@media (min-width: 1000px) {
+  #cabeceraEscritorio,
+  #menu {
+    display: block;
+  }
+  #cabeceraMovil,
+  .cabeceraSeccion,
+  .detalle {
+    display: none;
+  }
+  #album {
+    border-left: 2px solid #ccc;
+    float: right;
+    font-size: 0.6em;
+    padding-left: 1em;
+    margin-right: 4em;
+    width: 45%;
+  }
+  #album .caratula {
+    display: none;
+  }
+  #cancion {
+    float: left;
+    margin-top: 1em;
+    width: 450px;
+  }
+  #contenedor {
+    max-width: 1150px;
+  }
+  #paginaInicio #registrar {
+    display: none;
+  }
+  #paginaInicio #slogans {
+    margin-top: 2em;
+  }
+  #paginaInicio #slogans #escucha,
+  #paginaInicio #slogans #comparte,
+  #paginaInicio #slogans #crea {
+    height: auto;
+    overflow: hidden;
+  }
+  #paginaInicio #slogans #escucha img,
+  #paginaInicio #slogans #comparte img,
+  #paginaInicio #slogans #crea img {
+    border-radius: 50%;
+  }
+  #paginaInicio #slogans #escucha img:nth-of-type(1),
+  #paginaInicio #slogans #comparte img:nth-of-type(1),
+  #paginaInicio #slogans #crea img:nth-of-type(1) {
+    display: none;
+  }
+  #paginaInicio #slogans #escucha img:nth-of-type(2),
+  #paginaInicio #slogans #comparte img:nth-of-type(2),
+  #paginaInicio #slogans #crea img:nth-of-type(2) {
+    display: inline-block;
+  }
+  #paginaInicio #slogans #escucha h3,
+  #paginaInicio #slogans #comparte h3,
+  #paginaInicio #slogans #crea h3 {
+    display: inline-block;
+    float: left;
+    margin-top: 3em;
+    text-align: left;
+    width: 35%;
+  }
+  #paginaInicio #slogans #escucha p,
+  #paginaInicio #slogans #comparte p,
+  #paginaInicio #slogans #crea p {
+    display: inline-block;
+    float: left;
+    text-align: left;
+    width: 35%;
+  }
+  #paginaInicio #slogans #escucha figure {
+    display: inline-block;
+    float: left;
+    width: 50%;
+  }
+  #paginaInicio #slogans #escucha h3 {
+    float: left;
+  }
+  #paginaInicio #slogans #escucha p {
+    float: left;
+  }
+  #paginaInicio #slogans #comparte figure {
+    display: inline-block;
+    float: right;
+    width: 50%;
+  }
+  #paginaInicio #slogans #comparte h3 {
+    float: right;
+  }
+  #paginaInicio #slogans #comparte p {
+    float: right;
+  }
+  #paginaInicio #slogans #crea figure {
+    display: inline-block;
+    float: left;
+    width: 50%;
+  }
+  #paginaInicio #slogans #crea h3 {
+    float: left;
+  }
+  #paginaInicio #slogans #crea p {
+    float: left;
+  }
+  #paginaInicio #social img {
+    left: 8em;
+    padding-top: 0;
+    position: absolute;
+    top: 2em;
+    width: 225px;
+  }
+  #paginaInicio #social .enlace01 {
+    display: block;
+    text-decoration: none;
+    color: #c36;
+    position: absolute;
+    top: 2.5em;
+    right: 8em;
+  }
+  #paginaInicio #social .enlace02 {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+  }
+  #paginaInicio #social .enlace02 span {
+    color: #c36;
+  }
+  #paginaInicio #social .parr-social {
+    font-size: 2.3em;
+    padding-top: 3em;
+    width: 60%;
+  }
+  #playlists .listaVacia {
+    display: block;
+  }
+  #playlistAbierta {
+    width: 50%;
+    float: right;
+  }
+  #playlistAbierta .listadoPlaylist {
+    font-size: 0.9em;
+  }
+  #perfil #menuPerfilListas {
+    display: block;
+  }
+  #perfil .cabeceraPerfil {
+    border: none;
+    width: 45%;
+    float: left;
+  }
+  #perfil #editarPerfil,
+  #perfil #cambiarPassword {
+    float: right;
+    width: 40%;
+  }
+  #perfil #editarPerfil h4,
+  #perfil #cambiarPassword h4 {
+    display: none;
+  }
+  #perfil #editarPerfil input,
+  #perfil #cambiarPassword input {
+    margin: 0.5em 0;
+  }
+  #search .caja-busqueda {
+    display: none;
+  }
+  #search .icon-search {
+    display: none;
+  }
+  #search .listado h3 {
+    color: #ccc;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 25%;
+  }
+  #search .listado .todosA {
+    display: none;
+  }
+  #search .listado .todosB {
+    display: inline-block;
+    text-align: right;
+    width: 70%;
+  }
+  #search .listado .todosB a {
+    color: #333;
+    text-decoration: none;
+  }
+  #search .artista img,
+  #search .albumes img {
+    height: 225px;
+    width: 225px;
+  }
+  #search .artista ul li,
+  #search .albumes ul li {
+    display: inline-block;
+    border: none;
+  }
+  #search .artista ul li figure,
+  #search .albumes ul li figure {
+    display: block;
+  }
+  #search .artista ul li p,
+  #search .albumes ul li p {
+    display: block;
+  }
+  #search .canciones img {
+    display: block;
+    float: left;
+    height: 80px;
+    vertical-align: top;
+    width: 80px;
+  }
+  #search .canciones li {
+    border: none;
+    width: 450px;
+    float: left;
+    position: relative;
+  }
+  #search .canciones li h4 {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 1em;
+    width: 70%;
+  }
+  #search .canciones li p {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 2.5em;
+    width: 70%;
+  }
+  #search .canciones li:nth-of-type(even) {
+    margin-left: 2em;
+  }
+  .control {
+    font-size: 0.8em;
+  }
+  .hit {
+    height: 300px;
+    width: 225px;
+  }
+  .hit img {
+    height: 225px;
+    width: 225px;
+  }
+  .listadoListas ul li {
+    display: inline-block;
+    border: none;
+  }
+  .listadoListas ul li figure {
+    display: block;
+  }
+  .listadoListas ul li p {
+    display: block;
+  }
+  .listadoListas ul li img {
+    height: 225px;
+    width: 225px;
+  }
+  .listadoListas .cabListPlaylist {
+    color: #ccc;
+    display: block;
+    border-top: 1px solid #ccc;
+    margin-top: 1em;
+    padding: 1em 0 0 1em;
+  }
+  .listadoListas .verMisListas {
+    display: none;
+  }
+}
+@media (min-width: 765px) {
+  body {
+    font-size: 25px;
+  }
+  #cabeceraMovil {
+    padding-top: 1em;
+  }
+  #headerArtista h2 {
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    font-size: 2em;
+  }
+  #headerArtista .icono_1 {
+    color: #333;
+    font-size: 2em;
+  }
+  #perfil .listado {
+    font-size: 1.3em;
+    font-weight: lighter;
+  }
+  #perfil .listado h4 {
+    color: #c36;
+    border: none;
+    margin-top: 1em;
+    text-align: center;
+  }
+  #perfil .listado li {
+    border: none;
+  }
+  #perfil .listado li img {
+    height: 75px;
+    width: 75px;
+  }
+  #perfilArtista #albumsArtista h3 {
+    font-size: 1.4em;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%;
+  }
+  #perfilArtista #albumsArtista h3 span {
+    color: #c36;
+  }
+  #perfilNoPlaylist .listado h4 {
+    display: none;
+  }
+  #pie {
+    height: 3em;
+  }
+  #pie img {
+    height: 1.5em;
+    margin: 0.5em 1em 0 1em;
+    vertical-align: buttom;
+  }
+  #pie a {
+    font-size: 0.7em;
+  }
+  #seguirPlaylist {
+    font-size: 1.3em;
+  }
+  #seguirPlaylist img {
+    height: 75px;
+    width: 75px;
+  }
+  #seguirPlaylist .boton {
+    margin-left: 2.5em;
+  }
+  #social img {
+    width: 450px;
+  }
+  .accion {
+    font-size: 2em;
+    height: 2em;
+    line-height: 2em;
+  }
+  .botonSocial {
+    height: 4em;
+    line-height: 4em;
+    position: relative;
+    width: 450px;
+  }
+  .botonSocial .icono_1 {
+    left: 0;
+    margin: 2em;
+    position: absolute;
+    top: 0.4em;
+  }
+  .botonSocial p {
+    margin-left: 3em;
+  }
+  .cabeceraSeccion h3 {
+    font-size: 1.5em;
+  }
+  .cabeceraSeccion img {
+    height: 2em;
+    width: 2em;
+  }
+  .cabeceraPerfil {
+    border-bottom: 1px solid #999;
+  }
+  .cabeceraPerfil .boton {
+    width: 5em;
+  }
+  .cabeceraPerfil img {
+    height: 223px;
+    width: 223px;
+  }
+  .hit {
+    height: 285px;
+    padding: 1em;
+    width: 205px;
+  }
+  .hit img {
+    height: 205px;
+    width: 205px;
+  }
+  .item-cancion p {
+    font-size: 1.7em;
+  }
+  .item-cancion a:before {
+    font-size: 1.7em;
+    line-height: 3.2em;
+  }
+  .listadoListas a {
+    color: #333;
+    font-size: 1.5em;
+    text-decoration: none;
+  }
+  .listadoListas figure img {
+    height: 77px;
+    width: 77px;
+  }
+  .listadoListas h4 {
+    margin-top: 0.5em;
+  }
+  .listadoListas li {
+    border: none;
+  }
+  .listadoListas span {
+    display: inline-block;
+  }
+  .listadoPlaylist li {
+    border: none;
+    font-size: 1.2em;
+  }
+  .listadoPlaylist li figure img {
+    height: 75px;
+    width: 75px;
+  }
+  .listadoPlaylist li .acciones-small {
+    margin-right: 100px;
+  }
+  .listaVacia {
+    border: none;
+    font-size: 1.3em;
+  }
+  .listaVacia img {
+    height: 175px;
+    margin-bottom: 1em;
+    width: 175px;
+  }
+  .parr-conecta {
+    font-size: 1em;
+  }
+  .parr-social {
+    width: 450px;
+  }
+  .titulo-artista {
+    font-size: 1.5em;
+  }
+}
